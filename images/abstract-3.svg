@@ -1,0 +1,10 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="abstract-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#34495edd;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        <rect width="400" height="300" fill="url(#abstract-3)" />
+        <text x="200" y="150" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.9">Urban Rhythm</text>
+    </svg>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholder Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        canvas { margin: 10px; border: 1px solid #ccc; }
+        .section { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Generating Placeholder Images...</h1>
+    <div id="output"></div>
+
+    <script>
+        function createPlaceholder(width, height, color, text, filename) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = color;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Add subtle gradient
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, 'rgba(255,255,255,0.1)');
+            gradient.addColorStop(1, 'rgba(0,0,0,0.1)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Text
+            ctx.fillStyle = 'rgba(255,255,255,0.8)';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, width/2, height/2);
+            
+            // Add to page for download
+            document.getElementById('output').appendChild(canvas);
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.textContent = `Download ${filename}`;
+            link.style.display = 'block';
+            link.style.margin = '5px 0';
+            document.getElementById('output').appendChild(link);
+            
+            return canvas.toDataURL();
+        }
+
+        // Generate all placeholder images
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero and featured images
+            createPlaceholder(800, 600, '#3498db', 'Featured Artwork', 'hero-painting.jpg');
+            createPlaceholder(400, 300, '#e74c3c', 'Abstract Art', 'featured-1.jpg');
+            createPlaceholder(400, 300, '#2ecc71', 'Portrait Study', 'featured-2.jpg');
+            createPlaceholder(400, 300, '#f39c12', 'Still Life', 'featured-3.jpg');
+            
+            // Gallery abstract paintings
+            createPlaceholder(400, 300, '#9b59b6', 'Color Symphony', 'abstract-1.jpg');
+            createPlaceholder(400, 300, '#1abc9c', 'Fluid Dreams', 'abstract-2.jpg');
+            createPlaceholder(400, 300, '#34495e', 'Urban Rhythm', 'abstract-3.jpg');
+            
+            // Gallery portraits
+            createPlaceholder(400, 300, '#e67e22', 'Morning Light', 'portrait-1.jpg');
+            createPlaceholder(400, 300, '#95a5a6', 'Character Study', 'portrait-2.jpg');
+            
+            // Gallery landscapes
+            createPlaceholder(400, 300, '#27ae60', 'Mountain Serenity', 'landscape-1.jpg');
+            createPlaceholder(400, 300, '#f1c40f', 'Golden Hour', 'landscape-2.jpg');
+            createPlaceholder(400, 300, '#16a085', 'Forest Path', 'landscape-3.jpg');
+            
+            // Gallery still life
+            createPlaceholder(400, 300, '#e91e63', 'Spring Bouquet', 'still-life-1.jpg');
+            createPlaceholder(400, 300, '#8e44ad', 'Harvest Table', 'still-life-2.jpg');
+            createPlaceholder(400, 300, '#d35400', 'Modern Elements', 'still-life-3.jpg');
+            
+            // About page images
+            createPlaceholder(300, 350, '#607d8b', 'Artist Portrait', 'artist-portrait.jpg');
+            createPlaceholder(500, 400, '#795548', 'Artist Photo', 'artist-photo.jpg');
+            createPlaceholder(400, 300, '#ff5722', 'Studio Space', 'studio-photo.jpg');
+            createPlaceholder(400, 300, '#009688', 'Work in Progress', 'painting-process.jpg');
+            
+            console.log('All placeholder images generated! Right-click each image and "Save As" to download.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Shelby Artist Portfolio</title>
+    <meta name="description" content="Get in touch with Shelby for commissions, artwork inquiries, or general questions. Connect through the contact form or social media.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Shelby</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">I'd love to hear from you about commissions, artwork inquiries, or just to connect with fellow art enthusiasts</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Me a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="commission">Commission Request</option>
+                                <option value="purchase">Purchase Inquiry</option>
+                                <option value="exhibition">Exhibition Opportunity</option>
+                                <option value="press">Press/Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please share details about your inquiry..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    
+                    <div id="form-success" class="form-message success" style="display: none;">
+                        <p>Thank you for your message! I'll get back to you within 2-3 business days.</p>
+                    </div>
+                    
+                    <div id="form-error" class="form-message error" style="display: none;">
+                        <p>Sorry, there was an error sending your message. Please try again or contact me directly via social media.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Other Ways to Connect</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>hello@shelbyart.com</p>
+                                <small>I typically respond within 24-48 hours</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Social Media</h3>
+                                <p>Follow my artistic journey</p>
+                                <div class="social-buttons">
+                                    <a href="#" class="social-btn instagram">
+                                        <span>Instagram</span>
+                                    </a>
+                                    <a href="#" class="social-btn facebook">
+                                        <span>Facebook</span>
+                                    </a>
+                                    <a href="#" class="social-btn twitter">
+                                        <span>Twitter</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">🎨</div>
+                            <div class="contact-details">
+                                <h3>Studio Visits</h3>
+                                <p>By appointment only</p>
+                                <small>I occasionally offer studio visits for serious collectors and art enthusiasts</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do you accept commissions?</h3>
+                    <p>Yes! I love creating custom pieces. Commission timelines typically range from 4-8 weeks depending on size and complexity. Please contact me with your ideas and I'll provide a detailed quote.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Are your paintings for sale?</h3>
+                    <p>Most of my gallery pieces are available for purchase. Prices vary based on size, medium, and complexity. Contact me for current availability and pricing information.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you ship internationally?</h3>
+                    <p>Yes, I can arrange international shipping for my artwork. Shipping costs and insurance will be calculated based on the destination and piece size.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I visit your studio?</h3>
+                    <p>I offer studio visits by appointment for serious collectors and those interested in commissioning work. Please reach out to schedule a visit.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you teach art classes?</h3>
+                    <p>I occasionally offer workshops and private lessons. Follow my social media or sign up for my newsletter to stay updated on upcoming opportunities.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do you handle payment?</h3>
+                    <p>For purchases and commissions, I typically require a 50% deposit to begin work, with the balance due upon completion. I accept various payment methods including bank transfers and major credit cards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to my newsletter for updates on new artwork, upcoming exhibitions, and exclusive behind-the-scenes content.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <small>I respect your privacy and won't spam you. Unsubscribe anytime.</small>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shelby</h3>
+                    <p>Creating art that speaks to the soul</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shelby. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

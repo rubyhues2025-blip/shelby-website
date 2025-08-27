@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shelby Artist Portfolio</title>
+    <meta name="description" content="Browse Shelby's complete collection of original paintings including abstracts, portraits, landscapes, and still life artwork.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Shelby</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <h1 class="page-title">Gallery</h1>
+            <p class="page-subtitle">Explore my collection of original paintings</p>
+        </div>
+    </section>
+
+    <!-- Filter Navigation -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="abstract">Abstract</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="landscape">Landscapes</button>
+                <button class="filter-btn" data-filter="still-life">Still Life</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Abstract Paintings -->
+                <div class="gallery-item" data-category="abstract">
+                    <img src="images/abstract-1.svg" alt="Abstract composition with bold colors" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Color Symphony</h3>
+                            <p>Abstract • Acrylic on canvas</p>
+                            <p>24" x 36"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="abstract">
+                    <img src="images/abstract-2.svg" alt="Flowing abstract forms" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Fluid Dreams</h3>
+                            <p>Abstract • Mixed media</p>
+                            <p>30" x 40"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="abstract">
+                    <img src="images/abstract-3.svg" alt="Geometric abstract painting" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Urban Rhythm</h3>
+                            <p>Abstract • Oil on canvas</p>
+                            <p>20" x 24"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portrait Paintings -->
+                <div class="gallery-item" data-category="portrait">
+                    <img src="images/portrait-1.svg" alt="Expressive portrait painting" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Morning Light</h3>
+                            <p>Portrait • Oil on canvas</p>
+                            <p>18" x 24"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="portrait">
+                    <img src="images/portrait-2.svg" alt="Character study portrait" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Character Study</h3>
+                            <p>Portrait • Charcoal and oil</p>
+                            <p>16" x 20"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landscape Paintings -->
+                <div class="gallery-item" data-category="landscape">
+                    <img src="images/landscape-1.svg" alt="Serene landscape painting" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Mountain Serenity</h3>
+                            <p>Landscape • Oil on canvas</p>
+                            <p>36" x 48"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="landscape">
+                    <img src="images/landscape-2.svg" alt="Sunset landscape scene" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Golden Hour</h3>
+                            <p>Landscape • Acrylic on canvas</p>
+                            <p>24" x 30"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="landscape">
+                    <img src="images/landscape-3.svg" alt="Forest path painting" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Forest Path</h3>
+                            <p>Landscape • Oil on canvas</p>
+                            <p>20" x 28"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Still Life Paintings -->
+                <div class="gallery-item" data-category="still-life">
+                    <img src="images/still-life-1.svg" alt="Floral still life painting" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Spring Bouquet</h3>
+                            <p>Still Life • Oil on canvas</p>
+                            <p>16" x 20"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="still-life">
+                    <img src="images/still-life-2.svg" alt="Classic still life with fruit" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Harvest Table</h3>
+                            <p>Still Life • Acrylic on canvas</p>
+                            <p>18" x 24"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="still-life">
+                    <img src="images/still-life-3.svg" alt="Modern still life composition" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Modern Elements</h3>
+                            <p>Still Life • Mixed media</p>
+                            <p>20" x 24"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="" id="lightbox-image">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <div class="lightbox-nav">
+                <button id="prev-btn" class="nav-btn">&#8249;</button>
+                <button id="next-btn" class="nav-btn">&#8250;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shelby</h3>
+                    <p>Creating art that speaks to the soul</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Shelby. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
