@@ -511,6 +511,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         const componentManager = new ComponentManager();
         await componentManager.init(contentLoader.content);
     }
+    
+    // Initialize interactive features AFTER content is loaded
+    // This ensures event handlers are attached to the dynamically created content
+    if (typeof initMobileNavigation === 'function') {
+        initMobileNavigation();
+    }
+    if (typeof initGalleryFiltering === 'function') {
+        initGalleryFiltering();
+    }
+    if (typeof initLightbox === 'function') {
+        initLightbox();
+    }
+    if (typeof initContactForm === 'function') {
+        initContactForm();
+    }
+    if (typeof initNewsletterForm === 'function') {
+        initNewsletterForm();
+    }
+    if (typeof initScrollAnimations === 'function') {
+        initScrollAnimations();
+    }
+    if (typeof initSmoothScroll === 'function') {
+        initSmoothScroll();
+    }
 });
 
 // Export for potential external use

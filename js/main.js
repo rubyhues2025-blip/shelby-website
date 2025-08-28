@@ -1,27 +1,26 @@
 // Main JavaScript for Shelby's Art Website
 
-// DOM Content Loaded
+// DOM Content Loaded - Interactive features now initialized by ContentLoader
+// after dynamic content is loaded to ensure event handlers work properly
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
-    initMobileNavigation();
-    initGalleryFiltering();
-    initLightbox();
-    initContactForm();
-    initNewsletterForm();
-    initScrollAnimations();
-    initSmoothScroll();
+    // Interactive features are now initialized by content-loader.js
+    // This ensures they run AFTER dynamic content is populated
 });
 
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle with Event Delegation
 function initMobileNavigation() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navContainer = document.querySelector('[data-component="navigation"]');
 
-    if (!navToggle || !navMenu) return;
+    if (!navContainer) return;
 
-    // Toggle mobile menu
-    navToggle.addEventListener('click', function() {
+    // Use event delegation for nav toggle button
+    navContainer.addEventListener('click', function(e) {
+        const navToggle = e.target.closest('.nav-toggle');
+        if (!navToggle) return;
+
+        const navMenu = document.querySelector('.nav-menu');
+        if (!navMenu) return;
+
         navMenu.classList.toggle('active');
         
         // Animate hamburger bars
@@ -31,19 +30,30 @@ function initMobileNavigation() {
         bars[2].style.transform = navMenu.classList.contains('active') ? 'rotate(45deg) translate(-5px, -6px)' : '';
     });
 
-    // Close mobile menu when clicking on links
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+    // Use event delegation for nav links
+    navContainer.addEventListener('click', function(e) {
+        const navLink = e.target.closest('.nav-link');
+        if (!navLink) return;
+
+        const navMenu = document.querySelector('.nav-menu');
+        const navToggle = document.querySelector('.nav-toggle');
+        
+        if (navMenu && navToggle) {
             navMenu.classList.remove('active');
             const bars = navToggle.querySelectorAll('.bar');
             bars[0].style.transform = '';
             bars[1].style.opacity = '1';
             bars[2].style.transform = '';
-        });
+        }
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(e) {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (!navToggle || !navMenu) return;
+
         if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
             navMenu.classList.remove('active');
             const bars = navToggle.querySelectorAll('.bar');
@@ -54,47 +64,51 @@ function initMobileNavigation() {
     });
 }
 
-// Gallery Filtering System
+// Gallery Filtering System with Event Delegation
 function initGalleryFiltering() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const filterSection = document.querySelector('.filter-section');
+    const galleryGrid = document.querySelector('.gallery-grid');
 
-    if (!filterButtons.length || !galleryItems.length) return;
+    if (!filterSection || !galleryGrid) return;
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
+    // Use event delegation for filter buttons
+    filterSection.addEventListener('click', function(e) {
+        const clickedButton = e.target.closest('.filter-btn');
+        if (!clickedButton) return;
+
+        const filter = clickedButton.getAttribute('data-filter');
+        
+        // Update active button (find all current filter buttons dynamically)
+        const allFilterButtons = document.querySelectorAll('.filter-btn');
+        allFilterButtons.forEach(btn => btn.classList.remove('active'));
+        clickedButton.classList.add('active');
+        
+        // Filter gallery items (find all current gallery items dynamically)
+        const allGalleryItems = document.querySelectorAll('.gallery-item');
+        allGalleryItems.forEach(item => {
+            const category = item.getAttribute('data-category');
             
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter gallery items
-            galleryItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    item.style.display = 'block';
-                    item.classList.remove('hidden');
-                    // Add fade in animation
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 100);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                        item.classList.add('hidden');
-                    }, 300);
-                }
-            });
+            if (filter === 'all' || category === filter) {
+                item.style.display = 'block';
+                item.classList.remove('hidden');
+                // Add fade in animation
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 100);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.style.display = 'none';
+                    item.classList.add('hidden');
+                }, 300);
+            }
         });
     });
 }
 
-// Lightbox Functionality
+// Lightbox Functionality with Event Delegation
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
@@ -103,32 +117,50 @@ function initLightbox() {
     const lightboxClose = document.querySelector('.lightbox-close');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
-    const galleryImages = document.querySelectorAll('.gallery-image');
+    const galleryGrid = document.querySelector('.gallery-grid');
 
-    if (!lightbox) return;
+    if (!lightbox || !galleryGrid) return;
 
     let currentImageIndex = 0;
     let imageData = [];
 
-    // Collect image data
-    galleryImages.forEach((img, index) => {
-        const item = img.closest('.gallery-item');
-        const info = item.querySelector('.gallery-info');
+    // Collect image data from current gallery
+    function collectImageData() {
+        const galleryImages = document.querySelectorAll('.gallery-image');
+        imageData = [];
         
-        imageData.push({
-            src: img.src,
-            alt: img.alt,
-            title: info ? info.querySelector('h3').textContent : '',
-            description: info ? info.querySelectorAll('p')[0].textContent : ''
+        galleryImages.forEach((img, index) => {
+            const item = img.closest('.gallery-item');
+            const info = item.querySelector('.gallery-info');
+            
+            imageData.push({
+                src: img.src,
+                alt: img.alt,
+                title: info ? info.querySelector('h3').textContent : '',
+                description: info ? info.querySelectorAll('p')[0].textContent : ''
+            });
         });
+    }
 
-        // Add click event to open lightbox
-        img.addEventListener('click', function(e) {
-            e.preventDefault();
-            currentImageIndex = index;
-            openLightbox();
-        });
+    // Use event delegation - listen for clicks on gallery grid
+    galleryGrid.addEventListener('click', function(e) {
+        const clickedImage = e.target.closest('.gallery-image');
+        if (!clickedImage) return;
+        
+        e.preventDefault();
+        
+        // Recollect image data to handle dynamically added content
+        collectImageData();
+        
+        // Find the index of the clicked image
+        const allImages = document.querySelectorAll('.gallery-image');
+        currentImageIndex = Array.from(allImages).indexOf(clickedImage);
+        
+        openLightbox();
     });
+
+    // Initial data collection
+    collectImageData();
 
     function openLightbox() {
         if (imageData.length === 0) return;
