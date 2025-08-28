@@ -3,46 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelby - Artist Portfolio</title>
+    <title>Ruby Hues Designs</title>
     <meta name="description" content="Discover the beautiful paintings and artwork of Shelby - a talented artist showcasing original paintings and creative expressions.">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Bebas+Neue:wght@400&family=Montserrat:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts will be loaded by ComponentManager -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Shelby</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="gallery.html" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation Component -->
+    <div data-component="navigation"></div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to Shelby's Art World</h1>
-            <p class="hero-subtitle">Discover original paintings that capture emotion, beauty, and imagination</p>
-            <a href="gallery.html" class="cta-button">View Gallery</a>
+            <h1 class="hero-title" data-content="pages.home.hero.title">Welcome to Ruby Hues Designs</h1>
+            <p class="hero-subtitle" data-content="pages.home.hero.subtitle">Discover original paintings that capture emotion, beauty, and imagination</p>
+            <a href="gallery.html" class="cta-button" data-content="pages.home.hero.cta">View Gallery</a>
         </div>
         <div class="hero-image">
             <img src="images/hero-painting.svg" alt="Featured artwork by Shelby" class="hero-artwork">
@@ -52,7 +27,7 @@
     <!-- Featured Works -->
     <section class="featured-works">
         <div class="container">
-            <h2 class="section-title">Featured Paintings</h2>
+            <h2 class="section-title" data-content="pages.home.featured.sectionTitle">Featured Paintings</h2>
             <div class="featured-grid">
                 <div class="featured-item">
                     <img src="images/featured-1.svg" alt="Abstract landscape painting" class="featured-image">
@@ -84,9 +59,9 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About the Artist</h2>
-                    <p>Shelby is a passionate painter who finds inspiration in the world around her. With a unique style that blends realism with abstract elements, each piece tells a story and evokes emotion.</p>
-                    <a href="about.html" class="learn-more-btn">Learn More</a>
+                    <h2 data-content="pages.home.aboutPreview.title">About the Artist</h2>
+                    <p data-content="pages.home.aboutPreview.description">Shelby is a passionate painter who finds inspiration in the world around her. With a unique style that blends realism with abstract elements, each piece tells a story and evokes emotion.</p>
+                    <a href="about.html" class="learn-more-btn" data-content="pages.home.aboutPreview.cta">Learn More</a>
                 </div>
                 <div class="about-image">
                     <img src="images/artist-photo.svg" alt="Shelby, the artist" class="artist-photo">
@@ -95,37 +70,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Shelby</h3>
-                    <p>Creating art that speaks to the soul</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Shelby. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div data-component="footer"></div>
 
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/content-loader.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

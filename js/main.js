@@ -211,79 +211,33 @@ function initLightbox() {
 // Contact Form Handling
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
-    const successMessage = document.getElementById('form-success');
-    const errorMessage = document.getElementById('form-error');
 
     if (!contactForm) return;
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        // Validate form using shared utilities
+        if (!FormUtils.validateForm(contactForm)) {
+            return;
+        }
+
         // Get form data
         const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        };
 
-        // Basic validation
-        if (!name || !email || !message) {
-            showMessage(errorMessage, 'Please fill in all required fields.');
-            return;
-        }
-
-        if (!isValidEmail(email)) {
-            showMessage(errorMessage, 'Please enter a valid email address.');
-            return;
-        }
-
-        // Simulate form submission (replace with actual form handling)
-        submitContactForm({ name, email, subject, message });
+        // Use shared form submission utility
+        FormUtils.submitForm({ form: contactForm }, {
+            loadingText: 'Sending...',
+            successMessage: 'Thank you for your message! I\'ll get back to you within 2-3 business days.',
+            errorMessage: 'Sorry, there was an error sending your message. Please try again or contact me directly via social media.'
+        });
     });
-
-    function submitContactForm(data) {
-        // Show loading state
-        const submitBtn = contactForm.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-
-        // Simulate API call (replace with actual implementation)
-        setTimeout(() => {
-            // Reset button
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-
-            // For demo purposes, always show success
-            // In real implementation, handle the actual form submission here
-            showMessage(successMessage, 'Thank you for your message! I\'ll get back to you within 2-3 business days.');
-            contactForm.reset();
-        }, 2000);
-    }
-
-    function showMessage(messageElement, text) {
-        // Hide other messages
-        if (successMessage) successMessage.style.display = 'none';
-        if (errorMessage) errorMessage.style.display = 'none';
-
-        // Show the specified message
-        if (messageElement) {
-            if (text) {
-                messageElement.querySelector('p').textContent = text;
-            }
-            messageElement.style.display = 'block';
-            
-            // Auto-hide after 5 seconds
-            setTimeout(() => {
-                messageElement.style.display = 'none';
-            }, 5000);
-        }
-    }
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 }
 
 // Newsletter Form Handling
@@ -297,34 +251,28 @@ function initNewsletterForm() {
         
         const emailInput = newsletterForm.querySelector('input[type="email"]');
         const email = emailInput.value;
-        const button = newsletterForm.querySelector('button');
 
-        if (!email || !isValidEmail(email)) {
-            alert('Please enter a valid email address.');
+        if (!email || !FormUtils.isValidEmail(email)) {
+            UIUtils.showMessage('Please enter a valid email address.', 'error');
             return;
         }
 
-        // Show loading state
-        const originalText = button.textContent;
-        button.textContent = 'Subscribing...';
-        button.disabled = true;
-
-        // Simulate subscription (replace with actual implementation)
-        setTimeout(() => {
-            button.textContent = 'Subscribed!';
-            emailInput.value = '';
-            
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.disabled = false;
-            }, 2000);
-        }, 1500);
+        // Use shared form submission utility
+        FormUtils.submitForm({ form: newsletterForm }, {
+            loadingText: 'Subscribing...',
+            successMessage: 'Successfully subscribed! Thank you for joining our newsletter.',
+            errorMessage: 'Sorry, there was an error with your subscription. Please try again.',
+            onSuccess: () => {
+                const button = newsletterForm.querySelector('button');
+                const originalText = button.getAttribute('data-original-text') || 'Subscribe';
+                
+                button.textContent = 'Subscribed!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            }
+        });
     });
-
-    function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 }
 
 // Scroll Animations
@@ -432,63 +380,6 @@ function initImageLoading() {
     });
 }
 
-// Form Validation Utilities
-function validateForm(form) {
-    const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-    let isValid = true;
-    
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            showFieldError(input, 'This field is required');
-            isValid = false;
-        } else {
-            clearFieldError(input);
-        }
-        
-        // Email validation
-        if (input.type === 'email' && input.value && !isValidEmail(input.value)) {
-            showFieldError(input, 'Please enter a valid email address');
-            isValid = false;
-        }
-    });
-    
-    return isValid;
-}
-
-function showFieldError(field, message) {
-    clearFieldError(field);
-    
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'field-error';
-    errorDiv.textContent = message;
-    errorDiv.style.color = '#e74c3c';
-    errorDiv.style.fontSize = '0.9rem';
-    errorDiv.style.marginTop = '0.25rem';
-    
-    field.style.borderColor = '#e74c3c';
-    field.parentNode.appendChild(errorDiv);
-}
-
-function clearFieldError(field) {
-    const existingError = field.parentNode.querySelector('.field-error');
-    if (existingError) {
-        existingError.remove();
-    }
-    field.style.borderColor = '';
-}
-
-// Performance Optimization: Debounce Function
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
 
 // Initialize image loading when DOM is ready
 document.addEventListener('DOMContentLoaded', initImageLoading);

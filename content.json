@@ -1,0 +1,391 @@
+{
+  "meta": {
+    "version": "1.0",
+    "lastUpdated": "2025-07-28",
+    "description": "Content management for Ruby Hues Designs website"
+  },
+  "site": {
+    "name": "Ruby Hues Designs",
+    "tagline": "Creating art that speaks to the soul"
+  },
+  "navigation": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "seo": {
+    "home": {
+      "title": "Ruby Hues Designs",
+      "description": "Discover the beautiful paintings and artwork of Shelby - a talented artist showcasing original paintings and creative expressions."
+    },
+    "about": {
+      "title": "About - Ruby Hues Designs",
+      "description": "Learn about Shelby, a passionate painter who creates original artwork that captures emotion, beauty, and imagination through various painting techniques."
+    },
+    "gallery": {
+      "title": "Gallery - Ruby Hues Designs",
+      "description": "Browse Shelby's complete collection of original paintings including abstracts, portraits, landscapes, and still life artwork."
+    },
+    "contact": {
+      "title": "Contact - Ruby Hues Designs",
+      "description": "Get in touch with Shelby for commissions, artwork inquiries, or general questions. Connect through the contact form or social media."
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Welcome to Ruby Hues Designs",
+        "subtitle": "Discover original paintings that capture emotion, beauty, and imagination",
+        "cta": "View Gallery"
+      },
+      "featured": {
+        "sectionTitle": "Featured Paintings",
+        "paintings": [
+          {
+            "title": "Abstract Landscape",
+            "medium": "Mixed media on canvas",
+            "alt": "Abstract landscape painting"
+          },
+          {
+            "title": "Portrait Study",
+            "medium": "Oil on canvas",
+            "alt": "Portrait painting"
+          },
+          {
+            "title": "Still Life",
+            "medium": "Acrylic on canvas",
+            "alt": "Still life painting"
+          }
+        ]
+      },
+      "aboutPreview": {
+        "title": "About the Artist",
+        "description": "Shelby is a passionate painter who finds inspiration in the world around her. With a unique style that blends realism with abstract elements, each piece tells a story and evokes emotion.",
+        "cta": "Learn More"
+      }
+    },
+    "about": {
+      "header": {
+        "title": "About Shelby",
+        "tagline": "Creating art that speaks to the soul",
+        "summary": "I'm a passionate painter who finds inspiration in the world around me. Through my art, I explore the intersection of emotion, color, and form to create pieces that resonate with viewers on a deep level."
+      },
+      "story": {
+        "title": "My Artistic Journey",
+        "paragraphs": [
+          "My love for painting began in childhood, where I found solace and expression through colors and brushstrokes. What started as a simple fascination with how light danced across surfaces has evolved into a lifelong passion for capturing the essence of life through art.",
+          "I draw inspiration from the natural world, human emotions, and the interplay between light and shadow. Each painting is a dialogue between my inner vision and the canvas, resulting in works that blend realism with abstract elements to tell unique stories.",
+          "Over the years, I've developed my own distinctive style that combines traditional techniques with contemporary approaches. Whether working in oils, acrylics, or mixed media, I strive to create pieces that not only please the eye but also touch the heart and provoke thought."
+        ],
+        "studioCaption": "My studio space where creativity flows freely"
+      },
+      "approach": {
+        "title": "My Artistic Approach",
+        "items": [
+          {
+            "icon": "🎨",
+            "title": "Color & Emotion",
+            "description": "I believe that color is the language of emotion. Each hue carries its own story and energy, which I harness to convey feelings and moods in my paintings."
+          },
+          {
+            "icon": "✨",
+            "title": "Light & Shadow",
+            "description": "The interplay of light and shadow fascinates me. I use contrast not just as a technical element, but as a metaphor for the complexities of life itself."
+          },
+          {
+            "icon": "🌟",
+            "title": "Texture & Form",
+            "description": "Through varied brushstrokes and mixed media techniques, I create textures that invite viewers to not just see, but almost feel the surface of my paintings."
+          }
+        ]
+      },
+      "techniques": {
+        "title": "Techniques & Media",
+        "items": [
+          {
+            "title": "Oil Painting",
+            "description": "My primary medium for detailed work and portraits, allowing for rich color depth and smooth blending."
+          },
+          {
+            "title": "Acrylic",
+            "description": "Perfect for vibrant, contemporary pieces with quick drying times and bold color applications."
+          },
+          {
+            "title": "Mixed Media",
+            "description": "Combining various materials and techniques to create unique textures and visual interest."
+          },
+          {
+            "title": "Charcoal & Drawing",
+            "description": "Foundation work for composition planning and standalone expressive pieces."
+          }
+        ],
+        "processCaption": "A work in progress showing my layered approach"
+      },
+      "background": {
+        "title": "Background & Experience",
+        "education": {
+          "title": "Education",
+          "items": [
+            "Bachelor of Fine Arts - Painting",
+            "Advanced Studies in Color Theory",
+            "Workshops in Contemporary Techniques",
+            "Plein Air Painting Certification"
+          ]
+        },
+        "exhibitions": {
+          "title": "Exhibitions",
+          "items": [
+            "Local Art Gallery Group Show",
+            "Annual Community Arts Festival",
+            "Online Gallery Exhibitions",
+            "Private Collections Worldwide"
+          ]
+        }
+      },
+      "philosophy": {
+        "quote": "Art is not just about creating something beautiful—it's about capturing a moment, an emotion, or a story that resonates with the human experience. Every brushstroke is intentional, every color choice meaningful.",
+        "attribution": "- Shelby"
+      },
+      "cta": {
+        "title": "Let's Connect",
+        "description": "I love connecting with fellow art enthusiasts, collectors, and anyone who appreciates the beauty of original paintings.",
+        "buttons": {
+          "gallery": "View My Gallery",
+          "contact": "Get In Touch"
+        }
+      }
+    },
+    "gallery": {
+      "header": {
+        "title": "Gallery",
+        "subtitle": "Explore my collection of original paintings"
+      },
+      "filters": {
+        "all": "All Works",
+        "abstract": "Abstract",
+        "portrait": "Portraits",
+        "landscape": "Landscapes",
+        "stillLife": "Still Life"
+      },
+      "paintings": [
+        {
+          "title": "Color Symphony",
+          "category": "abstract",
+          "medium": "Acrylic on canvas",
+          "dimensions": "24\" x 36\"",
+          "alt": "Abstract composition with bold colors",
+          "image": "images/abstract-1.svg"
+        },
+        {
+          "title": "Fluid Dreams",
+          "category": "abstract",
+          "medium": "Mixed media",
+          "dimensions": "30\" x 40\"",
+          "alt": "Flowing abstract forms",
+          "image": "images/abstract-2.svg"
+        },
+        {
+          "title": "Urban Rhythm",
+          "category": "abstract",
+          "medium": "Oil on canvas",
+          "dimensions": "20\" x 24\"",
+          "alt": "Geometric abstract painting",
+          "image": "images/abstract-3.svg"
+        },
+        {
+          "title": "Morning Light",
+          "category": "portrait",
+          "medium": "Oil on canvas",
+          "dimensions": "18\" x 24\"",
+          "alt": "Expressive portrait painting",
+          "image": "images/portrait-1.svg"
+        },
+        {
+          "title": "Character Study",
+          "category": "portrait",
+          "medium": "Charcoal and oil",
+          "dimensions": "16\" x 20\"",
+          "alt": "Character study portrait",
+          "image": "images/portrait-2.svg"
+        },
+        {
+          "title": "Mountain Serenity",
+          "category": "landscape",
+          "medium": "Oil on canvas",
+          "dimensions": "36\" x 48\"",
+          "alt": "Serene landscape painting",
+          "image": "images/landscape-1.svg"
+        },
+        {
+          "title": "Golden Hour",
+          "category": "landscape",
+          "medium": "Acrylic on canvas",
+          "dimensions": "24\" x 30\"",
+          "alt": "Sunset landscape scene",
+          "image": "images/landscape-2.svg"
+        },
+        {
+          "title": "Forest Path",
+          "category": "landscape",
+          "medium": "Oil on canvas",
+          "dimensions": "20\" x 28\"",
+          "alt": "Forest path painting",
+          "image": "images/landscape-3.svg"
+        },
+        {
+          "title": "Spring Bouquet",
+          "category": "still-life",
+          "medium": "Oil on canvas",
+          "dimensions": "16\" x 20\"",
+          "alt": "Floral still life painting",
+          "image": "images/still-life-1.svg"
+        },
+        {
+          "title": "Harvest Table",
+          "category": "still-life",
+          "medium": "Acrylic on canvas",
+          "dimensions": "18\" x 24\"",
+          "alt": "Classic still life with fruit",
+          "image": "images/still-life-2.svg"
+        },
+        {
+          "title": "Modern Elements",
+          "category": "still-life",
+          "medium": "Mixed media",
+          "dimensions": "20\" x 24\"",
+          "alt": "Modern still life composition",
+          "image": "images/still-life-3.svg"
+        }
+      ]
+    },
+    "contact": {
+      "header": {
+        "title": "Get In Touch",
+        "subtitle": "I'd love to hear from you about commissions, artwork inquiries, or just to connect with fellow art enthusiasts"
+      },
+      "form": {
+        "title": "Send Me a Message",
+        "fields": {
+          "name": {
+            "label": "Your Name *",
+            "placeholder": ""
+          },
+          "email": {
+            "label": "Email Address *",
+            "placeholder": ""
+          },
+          "subject": {
+            "label": "Subject",
+            "options": [
+              { "value": "general", "text": "General Inquiry" },
+              { "value": "commission", "text": "Commission Request" },
+              { "value": "purchase", "text": "Purchase Inquiry" },
+              { "value": "exhibition", "text": "Exhibition Opportunity" },
+              { "value": "press", "text": "Press/Media" },
+              { "value": "other", "text": "Other" }
+            ]
+          },
+          "message": {
+            "label": "Message *",
+            "placeholder": "Please share details about your inquiry..."
+          }
+        },
+        "submitButton": "Send Message",
+        "messages": {
+          "success": "Thank you for your message! I'll get back to you within 2-3 business days.",
+          "error": "Sorry, there was an error sending your message. Please try again or contact me directly via social media."
+        }
+      },
+      "info": {
+        "title": "Other Ways to Connect",
+        "methods": [
+          {
+            "icon": "📧",
+            "title": "Email",
+            "primary": "hello@shelbyart.com",
+            "secondary": "I typically respond within 24-48 hours"
+          },
+          {
+            "icon": "📱",
+            "title": "Social Media",
+            "primary": "Follow my artistic journey",
+            "secondary": ""
+          },
+          {
+            "icon": "🎨",
+            "title": "Studio Visits",
+            "primary": "By appointment only",
+            "secondary": "I occasionally offer studio visits for serious collectors and art enthusiasts"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Do you accept commissions?",
+            "answer": "Yes! I love creating custom pieces. Commission timelines typically range from 4-8 weeks depending on size and complexity. Please contact me with your ideas and I'll provide a detailed quote."
+          },
+          {
+            "question": "Are your paintings for sale?",
+            "answer": "Most of my gallery pieces are available for purchase. Prices vary based on size, medium, and complexity. Contact me for current availability and pricing information."
+          },
+          {
+            "question": "Do you ship internationally?",
+            "answer": "Yes, I can arrange international shipping for my artwork. Shipping costs and insurance will be calculated based on the destination and piece size."
+          },
+          {
+            "question": "Can I visit your studio?",
+            "answer": "I offer studio visits by appointment for serious collectors and those interested in commissioning work. Please reach out to schedule a visit."
+          },
+          {
+            "question": "Do you teach art classes?",
+            "answer": "I occasionally offer workshops and private lessons. Follow my social media or sign up for my newsletter to stay updated on upcoming opportunities."
+          },
+          {
+            "question": "How do you handle payment?",
+            "answer": "For purchases and commissions, I typically require a 50% deposit to begin work, with the balance due upon completion. I accept various payment methods including bank transfers and major credit cards."
+          }
+        ]
+      },
+      "newsletter": {
+        "title": "Stay Updated",
+        "description": "Subscribe to my newsletter for updates on new artwork, upcoming exhibitions, and exclusive behind-the-scenes content.",
+        "placeholder": "Enter your email address",
+        "button": "Subscribe",
+        "privacy": "I respect your privacy and won't spam you. Unsubscribe anytime."
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "main": {
+        "title": "Ruby Hues Designs",
+        "tagline": "Creating art that speaks to the soul"
+      },
+      "quickLinks": {
+        "title": "Quick Links",
+        "links": [
+          { "text": "Gallery", "url": "gallery.html" },
+          { "text": "About", "url": "about.html" },
+          { "text": "Contact", "url": "contact.html" }
+        ]
+      },
+      "social": {
+        "title": "Follow",
+        "links": [
+          { "text": "Instagram", "url": "#" },
+          { "text": "Facebook", "url": "#" },
+          { "text": "Twitter", "url": "#" }
+        ]
+      }
+    },
+    "copyright": "&copy; 2025 Ruby Hues Designs. All rights reserved."
+  },
+  "socialLinks": {
+    "instagram": "#",
+    "facebook": "#",
+    "twitter": "#"
+  }
+}

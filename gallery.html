@@ -3,45 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Shelby Artist Portfolio</title>
+    <title>Gallery - Ruby Hues Designs</title>
     <meta name="description" content="Browse Shelby's complete collection of original paintings including abstracts, portraits, landscapes, and still life artwork.">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fonts will be loaded by ComponentManager -->
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>Shelby</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="gallery.html" class="nav-link active">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation Component -->
+    <div data-component="navigation"></div>
 
     <!-- Gallery Header -->
     <section class="gallery-header">
         <div class="container">
-            <h1 class="page-title">Gallery</h1>
-            <p class="page-subtitle">Explore my collection of original paintings</p>
+            <h1 class="page-title" data-content="pages.gallery.header.title">Gallery</h1>
+            <p class="page-subtitle" data-content="pages.gallery.header.subtitle">Explore my collection of original paintings</p>
         </div>
     </section>
 
@@ -206,37 +181,12 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Shelby</h3>
-                    <p>Creating art that speaks to the soul</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Shelby. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div data-component="footer"></div>
 
+    <script src="js/utils.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/content-loader.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
