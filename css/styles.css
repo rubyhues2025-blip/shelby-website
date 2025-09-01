@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #FF6B35;
+    --primary-color: #f47f90;
     --secondary-color: #F7931E;
     --accent-color: #00B4D8;
     --bright-pink: #E91E63;
@@ -1091,6 +1091,17 @@ p {
     .filter-btn {
         padding: 8px 15px;
         font-size: 0.9rem;
+    }
+}
+
+/* Desktop-only styles - hero painting bigger on larger screens */
+@media (min-width: 769px) {
+    .hero-image {
+        flex: 1.4;
+    }
+
+    .hero-artwork {
+        max-width: 120%;
     }
 }
 

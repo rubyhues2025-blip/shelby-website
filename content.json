@@ -163,99 +163,65 @@
       },
       "filters": {
         "all": "All Works",
-        "abstract": "Abstract",
-        "portrait": "Portraits",
-        "landscape": "Landscapes",
-        "stillLife": "Still Life"
+        "Western": "Western",
+        "religious": "Religious"
       },
       "paintings": [
         {
-          "title": "Color Symphony",
-          "category": "abstract",
-          "medium": "Acrylic on canvas",
-          "dimensions": "24\" x 36\"",
+          "title": "Monument Valley",
+          "category": "western",
+          "medium": "Oil on panel",
+          "dimensions": "24\" x 24\"",
           "alt": "Abstract composition with bold colors",
-          "image": "images/abstract-1.jpg"
+          "image": "images/IMG_3322.jpg"
         },
         {
-          "title": "Fluid Dreams",
-          "category": "abstract",
-          "medium": "Mixed media",
-          "dimensions": "30\" x 40\"",
+          "title": "Pink Horizon",
+          "category": "western",
+          "medium": "Oil on panel",
+          "dimensions": "24\" x 48\"",
           "alt": "Flowing abstract forms",
-          "image": "images/abstract-2.jpg"
+          "image": "images/IMG_3050.jpg"
         },
         {
-          "title": "Urban Rhythm",
-          "category": "abstract",
-          "medium": "Oil on canvas",
-          "dimensions": "20\" x 24\"",
+          "title": "Sight Seeing",
+          "category": "western",
+          "medium": "Oil on panel",
+          "dimensions": "24\" x 48\"",
           "alt": "Geometric abstract painting",
-          "image": "images/abstract-3.jpg"
+          "image": "images/IMG_3321.jpg"
         },
         {
-          "title": "Morning Light",
-          "category": "portrait",
-          "medium": "Oil on canvas",
-          "dimensions": "18\" x 24\"",
+          "title": "Retro Gaze",
+          "category": "western",
+          "medium": "Oil on panel",
+          "dimensions": "24\" x 24\"",
           "alt": "Expressive portrait painting",
-          "image": "images/portrait-1.jpg"
+          "image": "images/IMG_0899.jpg"
         },
         {
-          "title": "Character Study",
-          "category": "portrait",
-          "medium": "Charcoal and oil",
-          "dimensions": "16\" x 20\"",
+          "title": "I am like a start",
+          "category": "religious",
+          "medium": "Oil on panel",
+          "dimensions": "11\" x 14\"",
           "alt": "Character study portrait",
-          "image": "images/portrait-2.jpg"
+          "image": "images/IMG_0907.jpg"
         },
         {
-          "title": "Mountain Serenity",
-          "category": "landscape",
-          "medium": "Oil on canvas",
-          "dimensions": "36\" x 48\"",
+          "title": "Prayer",
+          "category": "religious",
+          "medium": "Oil on panel",
+          "dimensions": "8\" x 10\"",
           "alt": "Serene landscape painting",
-          "image": "images/landscape-1.jpg"
+          "image": "images/IMG_0908.JPG"
         },
         {
-          "title": "Golden Hour",
-          "category": "landscape",
-          "medium": "Acrylic on canvas",
-          "dimensions": "24\" x 30\"",
+          "title": "Prayer",
+          "category": "religious",
+          "medium": "Oil on panel",
+          "dimensions": "8\" x 10\"",
           "alt": "Sunset landscape scene",
-          "image": "images/landscape-2.jpg"
-        },
-        {
-          "title": "Forest Path",
-          "category": "landscape",
-          "medium": "Oil on canvas",
-          "dimensions": "20\" x 28\"",
-          "alt": "Forest path painting",
-          "image": "images/landscape-3.jpg"
-        },
-        {
-          "title": "Spring Bouquet",
-          "category": "still-life",
-          "medium": "Oil on canvas",
-          "dimensions": "16\" x 20\"",
-          "alt": "Floral still life painting",
-          "image": "images/still-life-1.jpg"
-        },
-        {
-          "title": "Harvest Table",
-          "category": "still-life",
-          "medium": "Acrylic on canvas",
-          "dimensions": "18\" x 24\"",
-          "alt": "Classic still life with fruit",
-          "image": "images/still-life-2.jpg"
-        },
-        {
-          "title": "Modern Elements",
-          "category": "still-life",
-          "medium": "Mixed media",
-          "dimensions": "20\" x 24\"",
-          "alt": "Modern still life composition",
-          "image": "images/still-life-3.jpg"
+          "image": "images/713EC7FE-078E-4721-B932-39B479A5013A.JPG"
         }
       ]
     },
