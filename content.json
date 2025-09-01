@@ -175,7 +175,7 @@
           "medium": "Acrylic on canvas",
           "dimensions": "24\" x 36\"",
           "alt": "Abstract composition with bold colors",
-          "image": "images/abstract-1.svg"
+          "image": "images/abstract-1.jpg"
         },
         {
           "title": "Fluid Dreams",
@@ -183,7 +183,7 @@
           "medium": "Mixed media",
           "dimensions": "30\" x 40\"",
           "alt": "Flowing abstract forms",
-          "image": "images/abstract-2.svg"
+          "image": "images/abstract-2.jpg"
         },
         {
           "title": "Urban Rhythm",
@@ -191,7 +191,7 @@
           "medium": "Oil on canvas",
           "dimensions": "20\" x 24\"",
           "alt": "Geometric abstract painting",
-          "image": "images/abstract-3.svg"
+          "image": "images/abstract-3.jpg"
         },
         {
           "title": "Morning Light",
@@ -199,7 +199,7 @@
           "medium": "Oil on canvas",
           "dimensions": "18\" x 24\"",
           "alt": "Expressive portrait painting",
-          "image": "images/portrait-1.svg"
+          "image": "images/portrait-1.jpg"
         },
         {
           "title": "Character Study",
@@ -207,7 +207,7 @@
           "medium": "Charcoal and oil",
           "dimensions": "16\" x 20\"",
           "alt": "Character study portrait",
-          "image": "images/portrait-2.svg"
+          "image": "images/portrait-2.jpg"
         },
         {
           "title": "Mountain Serenity",
@@ -215,7 +215,7 @@
           "medium": "Oil on canvas",
           "dimensions": "36\" x 48\"",
           "alt": "Serene landscape painting",
-          "image": "images/landscape-1.svg"
+          "image": "images/landscape-1.jpg"
         },
         {
           "title": "Golden Hour",
@@ -223,7 +223,7 @@
           "medium": "Acrylic on canvas",
           "dimensions": "24\" x 30\"",
           "alt": "Sunset landscape scene",
-          "image": "images/landscape-2.svg"
+          "image": "images/landscape-2.jpg"
         },
         {
           "title": "Forest Path",
@@ -231,7 +231,7 @@
           "medium": "Oil on canvas",
           "dimensions": "20\" x 28\"",
           "alt": "Forest path painting",
-          "image": "images/landscape-3.svg"
+          "image": "images/landscape-3.jpg"
         },
         {
           "title": "Spring Bouquet",
@@ -239,7 +239,7 @@
           "medium": "Oil on canvas",
           "dimensions": "16\" x 20\"",
           "alt": "Floral still life painting",
-          "image": "images/still-life-1.svg"
+          "image": "images/still-life-1.jpg"
         },
         {
           "title": "Harvest Table",
@@ -247,7 +247,7 @@
           "medium": "Acrylic on canvas",
           "dimensions": "18\" x 24\"",
           "alt": "Classic still life with fruit",
-          "image": "images/still-life-2.svg"
+          "image": "images/still-life-2.jpg"
         },
         {
           "title": "Modern Elements",
@@ -255,7 +255,7 @@
           "medium": "Mixed media",
           "dimensions": "20\" x 24\"",
           "alt": "Modern still life composition",
-          "image": "images/still-life-3.svg"
+          "image": "images/still-life-3.jpg"
         }
       ]
     },

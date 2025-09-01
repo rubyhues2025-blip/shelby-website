@@ -137,7 +137,7 @@ class ComponentManager {
         // Create standardized font loading
         const fontLink = document.createElement('link');
         fontLink.rel = 'stylesheet';
-        fontLink.href = 'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Bebas+Neue:wght@400&family=Montserrat:wght@400;600;700&family=Nunito:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap';
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Limelight&display=swap';
         
         document.head.appendChild(fontLink);
     }
