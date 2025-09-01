@@ -25,12 +25,11 @@ class ComponentManager {
     getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop();
-        
+
         if (filename === 'index.html' || filename === '') return 'home';
-        if (filename === 'about.html') return 'about';
         if (filename === 'gallery.html') return 'gallery';
         if (filename === 'contact.html') return 'contact';
-        
+
         return 'home';
     }
 
@@ -45,7 +44,6 @@ class ComponentManager {
         const navigation = this.content?.navigation || {
             home: 'Home',
             gallery: 'Gallery',
-            about: 'About',
             contact: 'Contact'
         };
 
@@ -61,9 +59,6 @@ class ComponentManager {
                         </li>
                         <li class="nav-item">
                             <a href="gallery.html" class="nav-link ${this.currentPage === 'gallery' ? 'active' : ''}">${navigation.gallery}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about.html" class="nav-link ${this.currentPage === 'about' ? 'active' : ''}">${navigation.about}</a>
                         </li>
                         <li class="nav-item">
                             <a href="contact.html" class="nav-link ${this.currentPage === 'contact' ? 'active' : ''}">${navigation.contact}</a>
@@ -105,7 +100,6 @@ class ComponentManager {
                             <h4>${quickLinksTitle}</h4>
                             <ul class="footer-links">
                                 <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>

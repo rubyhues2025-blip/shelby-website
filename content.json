@@ -11,7 +11,6 @@
   "navigation": {
     "home": "Home",
     "gallery": "Gallery",
-    "about": "About",
     "contact": "Contact"
   },
   "seo": {
@@ -19,10 +18,7 @@
       "title": "Ruby Hues Designs",
       "description": "Discover the beautiful paintings and artwork of Shelby - a talented artist showcasing original paintings and creative expressions."
     },
-    "about": {
-      "title": "About - Ruby Hues Designs",
-      "description": "Learn about Shelby, a passionate painter who creates original artwork that captures emotion, beauty, and imagination through various painting techniques."
-    },
+
     "gallery": {
       "title": "Gallery - Ruby Hues Designs",
       "description": "Browse Shelby's complete collection of original paintings including abstracts, portraits, landscapes, and still life artwork."
@@ -61,101 +57,11 @@
       },
       "aboutPreview": {
         "title": "About the Artist",
-        "description": "Shelby is a passionate painter who finds inspiration in the world around her. With a unique style that blends realism with abstract elements, each piece tells a story and evokes emotion.",
+        "description": "My name is Shelby! I am a mixed media artist with a current emphasis in oil painting! I am from southern Arizona, and I have been exploring some nostalgic concepts mixed with a modern approach.",
         "cta": "Learn More"
       }
     },
-    "about": {
-      "header": {
-        "title": "About Shelby",
-        "tagline": "Creating art that speaks to the soul",
-        "summary": "I'm a passionate painter who finds inspiration in the world around me. Through my art, I explore the intersection of emotion, color, and form to create pieces that resonate with viewers on a deep level."
-      },
-      "story": {
-        "title": "My Artistic Journey",
-        "paragraphs": [
-          "My love for painting began in childhood, where I found solace and expression through colors and brushstrokes. What started as a simple fascination with how light danced across surfaces has evolved into a lifelong passion for capturing the essence of life through art.",
-          "I draw inspiration from the natural world, human emotions, and the interplay between light and shadow. Each painting is a dialogue between my inner vision and the canvas, resulting in works that blend realism with abstract elements to tell unique stories.",
-          "Over the years, I've developed my own distinctive style that combines traditional techniques with contemporary approaches. Whether working in oils, acrylics, or mixed media, I strive to create pieces that not only please the eye but also touch the heart and provoke thought."
-        ],
-        "studioCaption": "My studio space where creativity flows freely"
-      },
-      "approach": {
-        "title": "My Artistic Approach",
-        "items": [
-          {
-            "icon": "🎨",
-            "title": "Color & Emotion",
-            "description": "I believe that color is the language of emotion. Each hue carries its own story and energy, which I harness to convey feelings and moods in my paintings."
-          },
-          {
-            "icon": "✨",
-            "title": "Light & Shadow",
-            "description": "The interplay of light and shadow fascinates me. I use contrast not just as a technical element, but as a metaphor for the complexities of life itself."
-          },
-          {
-            "icon": "🌟",
-            "title": "Texture & Form",
-            "description": "Through varied brushstrokes and mixed media techniques, I create textures that invite viewers to not just see, but almost feel the surface of my paintings."
-          }
-        ]
-      },
-      "techniques": {
-        "title": "Techniques & Media",
-        "items": [
-          {
-            "title": "Oil Painting",
-            "description": "My primary medium for detailed work and portraits, allowing for rich color depth and smooth blending."
-          },
-          {
-            "title": "Acrylic",
-            "description": "Perfect for vibrant, contemporary pieces with quick drying times and bold color applications."
-          },
-          {
-            "title": "Mixed Media",
-            "description": "Combining various materials and techniques to create unique textures and visual interest."
-          },
-          {
-            "title": "Charcoal & Drawing",
-            "description": "Foundation work for composition planning and standalone expressive pieces."
-          }
-        ],
-        "processCaption": "A work in progress showing my layered approach"
-      },
-      "background": {
-        "title": "Background & Experience",
-        "education": {
-          "title": "Education",
-          "items": [
-            "Bachelor of Fine Arts - Painting",
-            "Advanced Studies in Color Theory",
-            "Workshops in Contemporary Techniques",
-            "Plein Air Painting Certification"
-          ]
-        },
-        "exhibitions": {
-          "title": "Exhibitions",
-          "items": [
-            "Local Art Gallery Group Show",
-            "Annual Community Arts Festival",
-            "Online Gallery Exhibitions",
-            "Private Collections Worldwide"
-          ]
-        }
-      },
-      "philosophy": {
-        "quote": "Art is not just about creating something beautiful—it's about capturing a moment, an emotion, or a story that resonates with the human experience. Every brushstroke is intentional, every color choice meaningful.",
-        "attribution": "- Shelby"
-      },
-      "cta": {
-        "title": "Let's Connect",
-        "description": "I love connecting with fellow art enthusiasts, collectors, and anyone who appreciates the beauty of original paintings.",
-        "buttons": {
-          "gallery": "View My Gallery",
-          "contact": "Get In Touch"
-        }
-      }
-    },
+
     "gallery": {
       "header": {
         "title": "Gallery",
@@ -269,7 +175,7 @@
           {
             "icon": "📧",
             "title": "Email",
-            "primary": "hello@shelbyart.com",
+            "primary": "Shelby@rubyhuesdesigns.com",
             "secondary": "I typically respond within 24-48 hours"
           },
           {
@@ -334,7 +240,6 @@
         "title": "Quick Links",
         "links": [
           { "text": "Gallery", "url": "gallery.html" },
-          { "text": "About", "url": "about.html" },
           { "text": "Contact", "url": "contact.html" }
         ]
       },

@@ -40,12 +40,11 @@ class ContentLoader {
     getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.split('/').pop();
-        
+
         if (filename === 'index.html' || filename === '') return 'home';
-        if (filename === 'about.html') return 'about';
         if (filename === 'gallery.html') return 'gallery';
         if (filename === 'contact.html') return 'contact';
-        
+
         return 'home'; // default
     }
 
@@ -123,7 +122,6 @@ class ContentLoader {
                 let navKey = 'home';
                 
                 if (href === 'gallery.html') navKey = 'gallery';
-                else if (href === 'about.html') navKey = 'about';
                 else if (href === 'contact.html') navKey = 'contact';
                 
                 if (navigation[navKey]) {
@@ -189,9 +187,6 @@ class ContentLoader {
             case 'home':
                 this.setupHomePage();
                 break;
-            case 'about':
-                this.setupAboutPage();
-                break;
             case 'gallery':
                 this.setupGalleryPage();
                 break;
@@ -234,117 +229,9 @@ class ContentLoader {
         });
     }
 
-    /**
-     * Setup about page specific content
-     */
-    setupAboutPage() {
-        const pageData = this.getContent('pages.about');
-        if (!pageData) return;
 
-        // Story paragraphs
-        this.populateStoryParagraphs(pageData.story);
-        
-        // Artistic approach items
-        this.populateApproachItems(pageData.approach);
-        
-        // Techniques
-        this.populateTechniques(pageData.techniques);
-        
-        // Background
-        this.populateBackground(pageData.background);
-    }
 
-    /**
-     * Populate story paragraphs
-     */
-    populateStoryParagraphs(storyData) {
-        if (!storyData) return;
-        
-        const storyText = document.querySelector('.story-text');
-        if (storyText && storyData.paragraphs) {
-            const paragraphs = storyText.querySelectorAll('p');
-            storyData.paragraphs.forEach((paragraph, index) => {
-                if (paragraphs[index]) {
-                    paragraphs[index].textContent = paragraph;
-                }
-            });
-        }
 
-        // Studio caption
-        const studioCaption = document.querySelector('.image-caption');
-        if (studioCaption && storyData.studioCaption) {
-            studioCaption.textContent = storyData.studioCaption;
-        }
-    }
-
-    /**
-     * Populate artistic approach items
-     */
-    populateApproachItems(approachData) {
-        if (!approachData) return;
-        
-        const approachItems = document.querySelectorAll('.approach-item');
-        approachItems.forEach((item, index) => {
-            const data = approachData.items[index];
-            if (data) {
-                const icon = item.querySelector('.approach-icon');
-                const title = item.querySelector('h3');
-                const description = item.querySelector('p');
-                
-                if (icon) icon.textContent = data.icon;
-                if (title) title.textContent = data.title;
-                if (description) description.textContent = data.description;
-            }
-        });
-    }
-
-    /**
-     * Populate techniques section
-     */
-    populateTechniques(techniquesData) {
-        if (!techniquesData) return;
-        
-        const techniqueItems = document.querySelectorAll('.technique-item');
-        techniqueItems.forEach((item, index) => {
-            const data = techniquesData.items[index];
-            if (data) {
-                const title = item.querySelector('h4');
-                const description = item.querySelector('p');
-                
-                if (title) title.textContent = data.title;
-                if (description) description.textContent = data.description;
-            }
-        });
-
-        // Process caption
-        const processCaption = document.querySelectorAll('.image-caption')[1];
-        if (processCaption && techniquesData.processCaption) {
-            processCaption.textContent = techniquesData.processCaption;
-        }
-    }
-
-    /**
-     * Populate background section
-     */
-    populateBackground(backgroundData) {
-        if (!backgroundData) return;
-
-        // Education items
-        const educationItems = document.querySelector('.background-column:first-child .background-list');
-        if (educationItems && backgroundData.education.items) {
-            educationItems.innerHTML = backgroundData.education.items
-                .map(item => `<li>${item}</li>`)
-                .join('');
-        }
-
-        // Exhibition items
-        const exhibitionItems = document.querySelector('.background-column:last-child .background-list');
-        if (exhibitionItems && backgroundData.exhibitions.items) {
-            exhibitionItems.innerHTML = backgroundData.exhibitions.items
-                .map(item => `<li>${item}</li>`)
-                .join('');
-        }
-    }
 
     /**
      * Setup gallery page specific content
