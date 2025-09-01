@@ -39,18 +39,18 @@
         "sectionTitle": "Featured Paintings",
         "paintings": [
           {
-            "title": "Abstract Landscape",
-            "medium": "Mixed media on canvas",
+            "title": "Monument Valley",
+            "medium": "Oil on panel",
             "alt": "Abstract landscape painting"
           },
           {
-            "title": "Portrait Study",
-            "medium": "Oil on canvas",
+            "title": "Prayer",
+            "medium": "Oil on panel",
             "alt": "Portrait painting"
           },
           {
-            "title": "Still Life",
-            "medium": "Acrylic on canvas",
+            "title": "Retro Gaze",
+            "medium": "Oil on panel",
             "alt": "Still life painting"
           }
         ]
